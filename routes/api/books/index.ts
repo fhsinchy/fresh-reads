@@ -1,5 +1,5 @@
-import { BookRepository } from "../../../repositories/BookRepository.ts";
-import db from "../../../services/Database.ts";
+import BookRepository from "#repositories/BookRepository.ts";
+import db from "#services/db.ts";
 import { Handlers } from "$fresh/server.ts";
 
 export const handler: Handlers<null> = {

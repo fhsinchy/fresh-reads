@@ -1,7 +1,7 @@
 import { Database } from "@db/sqlite";
-import { IBookRepository } from "../interfaces/IBookRepository.ts";
+import IBookRepository from "#interfaces/IBookRepository.ts";
 
-export class BookRepository implements IBookRepository {
+export default class BookRepository implements IBookRepository {
     private database: Database;
 
     constructor(database: Database) {
