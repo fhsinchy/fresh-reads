@@ -11,4 +11,8 @@ export class BookRepository implements IBookRepository {
     findAll(): Record<string, string>[] {
       return this.database.prepare("SELECT title, author FROM books").all();
     }
+
+    findById(id: string): Record<string, string> | undefined {
+      return this.database.prepare("SELECT title, author FROM books WHERE id = ?").get(id);
+    }
 }

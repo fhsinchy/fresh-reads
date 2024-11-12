@@ -1,3 +1,4 @@
 export interface IBookRepository {
-    findAll();
+    findAll(): Record<string, string>[];
+    findById(id: string);
 }
